@@ -12,13 +12,13 @@ export function Footer() {
                 <span className="text-primary-foreground font-bold text-xl">TB</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-lg leading-tight">TOBEKIN AUTO</span>
-                <span className="text-xs text-secondary-foreground/70">Pickup Accessories</span>
+                <span className="font-bold text-lg leading-tight">TOBEKIN TONNEAU COVER</span>
+                <span className="text-xs text-secondary-foreground/70">Premium Covers & Accessories</span>
               </div>
             </div>
             <p className="text-secondary-foreground/70 text-sm leading-relaxed max-w-md">
-              Leading manufacturer of premium pickup truck accessories. Serving the global automotive aftermarket with
-              quality and innovation since 2008.
+              Leading manufacturer of premium tonneau covers and exterior accessories for pickup trucks. Serving the global automotive aftermarket with
+              quality and innovation.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ export function Footer() {
         <div className="pt-8 border-t border-secondary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-secondary-foreground/70">
-              © {currentYear} TOBEKIN AUTO. All rights reserved.
+              © {currentYear} TOBEKIN TONNEAU COVER. All rights reserved.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">

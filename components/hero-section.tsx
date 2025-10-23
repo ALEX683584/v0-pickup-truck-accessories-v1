@@ -17,11 +17,11 @@ export function HeroSection() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 text-balance">
-            Premium Pickup Truck Accessories
+            Premium Tonneau Covers
           </h1>
 
           <p className="text-xl md:text-2xl text-primary-foreground/80 mb-8 max-w-2xl text-pretty leading-relaxed">
-            Your trusted partner for high-quality tonneau covers, electric running boards, fender flares, and car mats.
+            Your trusted partner for high-quality tonneau covers and exterior accessories for pickup trucks.
             15+ years of manufacturing excellence.
           </p>
 

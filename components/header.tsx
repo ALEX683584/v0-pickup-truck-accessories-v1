@@ -35,8 +35,8 @@ export function Header() {
               <span className="text-primary-foreground font-bold text-xl">TB</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg leading-tight text-foreground">TOBEKIN AUTO</span>
-              <span className="text-xs text-muted-foreground">Pickup Accessories</span>
+              <span className="font-bold text-lg leading-tight text-foreground">TOBEKIN TONNEAU COVER</span>
+              <span className="text-xs text-muted-foreground">Premium Covers & Accessories</span>
             </div>
           </a>
 
