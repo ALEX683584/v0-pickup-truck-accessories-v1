@@ -12,9 +12,10 @@ export default function Home() {
       <main>
         <HeroSection />
         <ProductsSection />
-        <AboutSection />
+
         <ContactSection />
       </main>
+      <AboutSection />
       <Footer />
     </div>
   )

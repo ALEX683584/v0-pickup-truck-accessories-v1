@@ -4,32 +4,44 @@ import { ArrowRight } from "lucide-react"
 
 const products = [
   {
-    title: "Tonneau Covers",
-    description:
-      "Premium soft and hard tonneau covers including roll-up, tri-fold, and flip-up designs. Weather-resistant and durable construction.",
-    image: "/pickup-truck-tonneau-cover-black.jpg",
-    features: ["Soft Roll-up", "Tri-fold", "Hard Flip-up", "Low Profile"],
+    title: "Soft Roll-up Tonneau Cover",
+    description1: "Waterproof",
+    description2: "fuel-saving",
+    description3: "tool-free installation",
+    image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v1.jpg",
+    features: ["Easy to operate", "Weather-resistant", "Lightweight", "Secure mounting"],
   },
   {
-    title: "Electric Running Boards",
-    description:
-      "Automatic retractable running boards with smart sensors. Heavy-duty aluminum construction with anti-slip surface.",
-    image: "/electric-running-boards-on-pickup-truck.jpg",
-    features: ["Auto Deploy", "LED Lighting", "Weather Sealed", "500lb Capacity"],
+    title: "Soft Low Profile Tonneau Cover",
+    description1: "Waterproof",
+    description2: "fuel-saving",
+    description3: "tool-free installation",
+    image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v2.jpg",
+    features: ["Sleek design", "Weather protection", "Tool-free installation", "Durable fabric"],
   },
   {
-    title: "Fender Flares",
-    description:
-      "Stylish and protective fender flares for all major pickup models. Easy installation with OEM-quality fit and finish.",
-    image: "/pickup-truck-fender-flares-black.jpg",
-    features: ["Pocket Style", "Smooth Style", "UV Protected", "Easy Install"],
+    title: "Soft Tri-fold Tonneau Cover",
+    description1: "Waterproof",
+    description2: "fuel-saving",
+    description3: "tool-free installation",
+    image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v3.jpg",
+    features: ["Partial access capability", "Folds for storage", "Secure locking", "UV resistant"],
   },
   {
-    title: "Car Mats",
-    description:
-      "Custom-fit floor mats and liners. All-weather protection with raised edges to contain spills and debris.",
-    image: "/pickup-truck-floor-mats-rubber.jpg",
-    features: ["Custom Fit", "All-Weather", "Easy Clean", "Non-Slip"],
+    title: "Hard Tri-fold Low Profile Tonneau Cover",
+    description1: "Waterproof",
+    description2: "fuel-saving",
+    description3: "tool-free installation",
+    image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v8.jpg",
+    features: ["Maximum security", "Rigid protection", "Low profile", "Lockable"],
+  },
+  {
+    title: "Hard Flip-Up Low Profile Tonneau Cover",
+    description1: "Waterproof",
+    description2: "fuel-saving",
+    description3: "tool-free installation",
+    image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v9.jpg",
+    features: ["Complete access", "Low profile", "Durable construction", "Easy operation"],
   },
 ]
 
@@ -41,38 +53,33 @@ export function ProductsSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Products</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Specialized in four core product categories with OEM/ODM capabilities
+            Specialized in five core tonneau cover product categories with OEM/ODM capabilities
           </p>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Products List - Vertical Layout */}
+        <div className="space-y-8 max-w-[1200px] mx-auto">
           {products.map((product, index) => (
             <Card key={index} className="overflow-hidden group hover:shadow-xl transition-shadow">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src={product.image || "/placeholder.svg"}
-                  alt={product.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-foreground mb-3">{product.title}</h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">{product.description}</p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {product.features.map((feature, idx) => (
-                    <span key={idx} className="px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full">
-                      {feature}
-                    </span>
-                  ))}
+              <div className="flex flex-col md:flex-row">
+                <div className="relative md:w-1/2 h-72">
+                  <img
+                    src={product.image || "/placeholder.svg"}
+                    alt={product.title}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    width={600}
+                    height={300}
+                  />
                 </div>
+                <div className="md:w-1/2 h-72 p-4 flex flex-col justify-center">
+                  <h3 className="text-xl font-bold text-foreground mb-2">{product.title}</h3>
+                  <p className="text-muted-foreground text-xl mb-2 leading-relaxed mt-2">{product.description1}</p>
+                  <p className="text-muted-foreground text-xl mb-2 leading-relaxed">{product.description2}</p>
+                  <p className="text-muted-foreground text-xl mb-3 leading-relaxed">{product.description3}</p>
 
-                <Button variant="ghost" className="text-primary hover:text-primary/80 p-0">
-                  Learn More
-                  <ArrowRight className="ml-2" size={16} />
-                </Button>
-              </CardContent>
+                  {/* Features and Learn More button hidden as requested */}
+                </div>
+              </div>
             </Card>
           ))}
         </div>

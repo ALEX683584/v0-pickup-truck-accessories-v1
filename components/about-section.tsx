@@ -31,16 +31,18 @@ export function AboutSection() {
 
           {/* Content */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">About KSCAR AUTO</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Crafting the Ultimate Truck Bed Protection | TOBEKIN AUTO</h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              JIAXING KSCAR AUTO ACCESSORIES CO., LTD is a leading designer and manufacturer of premium pickup truck
-              accessories. Based in Jiaxing, Zhejiang Province, China, we've been serving the global automotive
-              aftermarket for over 15 years.
+              At TOBEKIN AUTO, we believe the open truck bed represents endless possibility. Our purpose is to protect that possibility. We are dedicated to designing and crafting the finest tonneau covers on the market, merging superior functionality with clean, automotive-grade aesthetics.
+            </p>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              Driven by innovation and an obsession with detail, we source only the highest-quality materials. From our ultra-durable, triple-layer vinyl that resists fading and cracking to our aircraft-grade aluminum frameworks, every component is selected for maximum performance and longevity. Our patented latch systems and tension-control mechanisms ensure a weather-tight, rattle-free seal, mile after mile.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Our focus on four core product categories allows us to maintain exceptional quality standards and deep
-              expertise. We work with distributors, retailers, and OEM partners worldwide to deliver innovative
-              solutions that enhance vehicle functionality and style.
+              We go beyond just selling a cover; we deliver peace of mind. Our products are the result of relentless engineering and real-world testing, ensuring they not only meet but exceed the rigorous demands of truck owners. This is protection redefined—it's security without sacrifice, and style that complements your truck's powerful presence.
+            </p>
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              At TOBEKIN AUTO, we are passionate about trucks and the people who drive them. Every product is tested and trusted to deliver the quality you deserve.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
