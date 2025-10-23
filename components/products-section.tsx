@@ -8,7 +8,7 @@ const products = [
     description1: "Waterproof",
     description2: "fuel-saving",
     description3: "tool-free installation",
-    image: "/pickup-truck-tonneau-cover-black.jpg",
+    image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v1.jpg",
     features: ["Easy to operate", "Weather-resistant", "Lightweight", "Secure mounting"],
   },
   {
@@ -16,7 +16,7 @@ const products = [
     description1: "Waterproof",
     description2: "fuel-saving",
     description3: "tool-free installation",
-    image: "/pickup-truck-tonneau-cover-black.jpg",
+    image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v2.jpg",
     features: ["Sleek design", "Weather protection", "Tool-free installation", "Durable fabric"],
   },
   {
@@ -24,7 +24,7 @@ const products = [
     description1: "Waterproof",
     description2: "fuel-saving",
     description3: "tool-free installation",
-    image: "/pickup-truck-tonneau-cover-black.jpg",
+    image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v3.jpg",
     features: ["Partial access capability", "Folds for storage", "Secure locking", "UV resistant"],
   },
   {
@@ -32,7 +32,7 @@ const products = [
     description1: "Waterproof",
     description2: "fuel-saving",
     description3: "tool-free installation",
-    image: "/pickup-truck-tonneau-cover-black.jpg",
+    image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v8.jpg",
     features: ["Maximum security", "Rigid protection", "Low profile", "Lockable"],
   },
   {
@@ -40,7 +40,7 @@ const products = [
     description1: "Waterproof",
     description2: "fuel-saving",
     description3: "tool-free installation",
-    image: "/pickup-truck-tonneau-cover-black.jpg",
+    image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v9.jpg",
     features: ["Complete access", "Low profile", "Durable construction", "Easy operation"],
   },
 ]
