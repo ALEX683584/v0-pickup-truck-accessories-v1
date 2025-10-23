@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: 'TOBEKIN TONNEAU COVER',
   description: 'Premium tonneau covers and exterior accessories for pickup trucks',
   generator: 'v0.app',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({
