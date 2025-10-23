@@ -80,7 +80,7 @@ export function ContactSection() {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Call Us</h3>
                     <a href="tel:+8615157418585" className="text-muted-foreground hover:text-primary transition-colors">
-                      +86 130-9592-6829
+                      +86 190-3219-6829
                     </a>
                   </div>
                 </div>

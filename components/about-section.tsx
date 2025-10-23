@@ -31,15 +31,18 @@ export function AboutSection() {
 
           {/* Content */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">About TOBEKIN TONNEAU COVER</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Crafting the Ultimate Truck Bed Protection | TOBEKIN AUTO</h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              TOBEKIN TONNEAU COVER is a dedicated brand of premium tonneau covers and exterior accessories for pickup trucks. We focus on delivering durable, high-quality solutions tailored for the pickup customization market.
+              At TOBEKIN AUTO, we believe the open truck bed represents endless possibility. Our purpose is to protect that possibility. We are dedicated to designing and crafting the finest tonneau covers on the market, merging superior functionality with clean, automotive-grade aesthetics.
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Through continuous innovation and strict quality control, TOBEKIN TONNEAU COVER has become a trusted supplier to vehicle dealers and 4x4 upgrade professionals.
+              Driven by innovation and an obsession with detail, we source only the highest-quality materials. From our ultra-durable, triple-layer vinyl that resists fading and cracking to our aircraft-grade aluminum frameworks, every component is selected for maximum performance and longevity. Our patented latch systems and tension-control mechanisms ensure a weather-tight, rattle-free seal, mile after mile.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              We are committed to being your reliable partner in the pickup accessories industry.
+              We go beyond just selling a cover; we deliver peace of mind. Our products are the result of relentless engineering and real-world testing, ensuring they not only meet but exceed the rigorous demands of truck owners. This is protection redefined—it's security without sacrifice, and style that complements your truck's powerful presence.
+            </p>
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              At TOBEKIN AUTO, we are passionate about trucks and the people who drive them. Every product is tested and trusted to deliver the quality you deserve.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
