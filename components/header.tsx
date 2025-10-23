@@ -6,6 +6,15 @@ import { Menu, X } from "lucide-react"
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const navItems = [
     { label: "Home", href: "#home" },
@@ -16,10 +25,10 @@ export function Header() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md ${scrolled ? 'h-[60px]' : 'h-[90px]'}`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className={`flex items-center justify-between ${scrolled ? 'h-[60px]' : 'h-[90px]'}`}>
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-primary rounded flex items-center justify-center">
@@ -37,7 +46,7 @@ export function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                className="text-base font-medium text-foreground hover:text-primary transition-colors"
               >
                 {item.label}
               </a>

@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center hero-gradient">
+    <section id="home" className="relative h-[1000px] flex items-center hero-gradient">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-20">
         <img src="https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/back_car_offroad.jpg" alt="Pickup truck" className="w-full h-full object-cover" />
@@ -12,7 +12,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl">
-          <div className="inline-block mb-6 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
+          <div className="inline-block mt-4 mb-6 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
             <span className="text-sm font-medium text-primary-foreground">Leading OEM/ODM Manufacturer</span>
           </div>
 

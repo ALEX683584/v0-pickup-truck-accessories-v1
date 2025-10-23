@@ -5,36 +5,41 @@ import { ArrowRight } from "lucide-react"
 const products = [
   {
     title: "Soft Roll-up Tonneau Cover",
-    description:
-      "Premium soft roll-up tonneau covers designed for easy use and reliable weather protection.",
+    description1: "Waterproof",
+    description2: "fuel-saving",
+    description3: "tool-free installation",
     image: "/pickup-truck-tonneau-cover-black.jpg",
     features: ["Easy to operate", "Weather-resistant", "Lightweight", "Secure mounting"],
   },
   {
     title: "Soft Low Profile Tonneau Cover",
-    description:
-      "Low-profile soft tonneau covers that provide a sleek look while keeping your truck bed secure.",
+    description1: "Waterproof",
+    description2: "fuel-saving",
+    description3: "tool-free installation",
     image: "/pickup-truck-tonneau-cover-black.jpg",
     features: ["Sleek design", "Weather protection", "Tool-free installation", "Durable fabric"],
   },
   {
     title: "Soft Tri-fold Tonneau Cover",
-    description:
-      "Flexible tri-fold design that allows for partial bed access while maintaining security.",
+    description1: "Waterproof",
+    description2: "fuel-saving",
+    description3: "tool-free installation",
     image: "/pickup-truck-tonneau-cover-black.jpg",
     features: ["Partial access capability", "Folds for storage", "Secure locking", "UV resistant"],
   },
   {
     title: "Hard Tri-fold Low Profile Tonneau Cover",
-    description:
-      "Rigid hard panels in a tri-fold configuration for maximum security and protection.",
+    description1: "Waterproof",
+    description2: "fuel-saving",
+    description3: "tool-free installation",
     image: "/pickup-truck-tonneau-cover-black.jpg",
     features: ["Maximum security", "Rigid protection", "Low profile", "Lockable"],
   },
   {
     title: "Hard Flip-Up Low Profile Tonneau Cover",
-    description:
-      "Hard panel design that flips up for complete bed access with a sleek low-profile appearance.",
+    description1: "Waterproof",
+    description2: "fuel-saving",
+    description3: "tool-free installation",
     image: "/pickup-truck-tonneau-cover-black.jpg",
     features: ["Complete access", "Low profile", "Durable construction", "Easy operation"],
   },
@@ -68,20 +73,11 @@ export function ProductsSection() {
                 </div>
                 <div className="md:w-1/2 h-72 p-4 flex flex-col justify-center">
                   <h3 className="text-xl font-bold text-foreground mb-2">{product.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-3 leading-relaxed">{product.description}</p>
+                  <p className="text-muted-foreground text-xl mb-2 leading-relaxed mt-2">{product.description1}</p>
+                  <p className="text-muted-foreground text-xl mb-2 leading-relaxed">{product.description2}</p>
+                  <p className="text-muted-foreground text-xl mb-3 leading-relaxed">{product.description3}</p>
 
-                  <div className="flex flex-wrap gap-1 mb-3">
-                    {product.features.map((feature, idx) => (
-                      <span key={idx} className="px-2 py-0.5 bg-muted text-muted-foreground text-xs rounded-full">
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-
-                  <Button variant="ghost" className="text-primary hover:text-primary/80 p-0 w-fit text-sm">
-                    Learn More
-                    <ArrowRight className="ml-2" size={14} />
-                  </Button>
+                  {/* Features and Learn More button hidden as requested */}
                 </div>
               </div>
             </Card>
