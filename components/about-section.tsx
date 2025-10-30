@@ -1,14 +1,5 @@
 import { CheckCircle2 } from "lucide-react"
 
-const capabilities = [
-  "ISO 9001 Certified Manufacturing",
-  "OEM/ODM Custom Solutions",
-  "In-house R&D Team",
-  "Quality Control at Every Stage",
-  "Fast Turnaround Times",
-  "Global Shipping Network",
-]
-
 export function AboutSection() {
   return (
     <section id="about" className="py-24 bg-muted">
@@ -44,15 +35,6 @@ export function AboutSection() {
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               At TOBEKIN AUTO, we are passionate about trucks and the people who drive them. Every product is tested and trusted to deliver the quality you deserve.
             </p>
-
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              {capabilities.map((capability, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span className="text-foreground">{capability}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

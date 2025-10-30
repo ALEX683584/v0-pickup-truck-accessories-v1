@@ -32,7 +32,7 @@ export function Header() {
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-primary rounded flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">TB</span>
+              <span className="text-primary-foreground font-bold text-xl">TC</span>
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-lg leading-tight text-foreground">TOBEKIN TONNEAU COVER</span>

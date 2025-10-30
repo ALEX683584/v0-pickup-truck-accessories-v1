@@ -9,7 +9,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-primary rounded flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">TB</span>
+                <span className="text-primary-foreground font-bold text-xl">TC</span>
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-lg leading-tight">TOBEKIN TONNEAU COVER</span>
@@ -60,9 +60,6 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
               <li className="text-sm text-secondary-foreground/70">Tonneau Covers</li>
-              <li className="text-sm text-secondary-foreground/70">Electric Running Boards</li>
-              <li className="text-sm text-secondary-foreground/70">Fender Flares</li>
-              <li className="text-sm text-secondary-foreground/70">Car Mats</li>
             </ul>
           </div>
         </div>
