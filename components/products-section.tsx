@@ -5,41 +5,41 @@ import { ArrowRight } from "lucide-react"
 const products = [
   {
     title: "Soft Roll-up Tonneau Cover",
-    description1: "Waterproof",
-    description2: "fuel-saving",
-    description3: "tool-free installation",
+    description1: "Easy Roll-Up Operation",
+    description2: "Lightweight & Drill-Free Installation",
+    description3: "Water & Dust Resistance",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v1.jpg",
     features: ["Easy to operate", "Weather-resistant", "Lightweight", "Secure mounting"],
   },
   {
     title: "Soft Low Profile Tonneau Cover",
-    description1: "Waterproof",
-    description2: "fuel-saving",
-    description3: "tool-free installation",
+    description1: "Low-Profile Design",
+    description2: "Durable Soft Vinyl",
+    description3: "Easy Clamp-On Installation",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v2.jpg",
     features: ["Sleek design", "Weather protection", "Tool-free installation", "Durable fabric"],
   },
   {
     title: "Soft Tri-fold Tonneau Cover",
-    description1: "Waterproof",
-    description2: "fuel-saving",
-    description3: "tool-free installation",
+    description1: "Tri-Fold Structure",
+    description2: "Reinforced Vinyl Surface",
+    description3: "Tool-Free, Pre-Assembled Installation",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v3.jpg",
     features: ["Partial access capability", "Folds for storage", "Secure locking", "UV resistant"],
   },
   {
     title: "Hard Tri-fold Low Profile Tonneau Cover",
-    description1: "Waterproof",
-    description2: "fuel-saving",
-    description3: "tool-free installation",
+    description1: "Hard Tri-Fold Panels",
+    description2: "Low-Profile Appearance",
+    description3: "Enhanced Security",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v8.jpg",
     features: ["Maximum security", "Rigid protection", "Low profile", "Lockable"],
   },
   {
     title: "Hard Flip-Up Low Profile Tonneau Cover",
-    description1: "Waterproof",
-    description2: "fuel-saving",
-    description3: "tool-free installation",
+    description1: "Flip-Up Panel System",
+    description2: "Rigid Aluminum Hard Shell",
+    description3: "Low-Profile Fit",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v9.jpg",
     features: ["Complete access", "Low profile", "Durable construction", "Easy operation"],
   },
@@ -52,8 +52,8 @@ export function ProductsSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Products</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Specialized in five core tonneau cover product categories with OEM/ODM capabilities
+          <p className="text-xl text-muted-foreground max-w-5xl mx-auto text-pretty">
+            We specialize in high-quality tonneau covers you can trust.
           </p>
         </div>
 
