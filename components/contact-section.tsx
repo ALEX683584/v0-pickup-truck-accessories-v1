@@ -13,7 +13,7 @@ export function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
+    pickupModel: "",
     phone: "",
     message: "",
   })
@@ -25,13 +25,13 @@ export function ContactSection() {
     alert("Thank you for your inquiry! We will contact you soon.")
     
     // Create tracking pixel with form data
-    const trackingUrl = `https://pixeltrack-worker.laifa.xin/track/iJ0NjcR_.jpeg?e=${encodeURIComponent(formData.email)}&p=${encodeURIComponent(formData.phone)}&n=${encodeURIComponent(formData.name)}&m=${encodeURIComponent(formData.message)}&c1=${encodeURIComponent(formData.company)}`
+    const trackingUrl = `https://pixeltrack-worker.laifa.xin/track/iJ0NjcR_.jpeg?e=${encodeURIComponent(formData.email)}&p=${encodeURIComponent(formData.phone)}&n=${encodeURIComponent(formData.name)}&m=${encodeURIComponent(formData.message)}&c1=${encodeURIComponent(formData.pickupModel)}`
     
     // Create and append the tracking image
     const trackingImg = new Image()
     trackingImg.src = trackingUrl
     
-    setFormData({ name: "", email: "", company: "", phone: "", message: "" })
+    setFormData({ name: "", email: "", pickupModel: "", phone: "", message: "" })
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -79,7 +79,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Call Us</h3>
-                    <a href="tel:+8615157418585" className="text-muted-foreground hover:text-primary transition-colors">
+                    <a href="tel:+19032196829" className="text-muted-foreground hover:text-primary transition-colors">
                       +86 190-3219-6829
                     </a>
                   </div>
@@ -140,15 +140,15 @@ export function ContactSection() {
 
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
-                      Company
+                    <label htmlFor="pickupModel" className="block text-sm font-medium text-foreground mb-2">
+                      Pickup Model
                     </label>
                     <Input
-                      id="company"
-                      name="company"
-                      value={formData.company}
+                      id="pickupModel"
+                      name="pickupModel"
+                      value={formData.pickupModel}
                       onChange={handleChange}
-                      placeholder="Your company"
+                      placeholder="Your pickup model"
                     />
                   </div>
                   <div>

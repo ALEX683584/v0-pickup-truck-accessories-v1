@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="bg-secondary text-secondary-foreground py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
-          {/* Company Info */}
+          {/* Site Info */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-primary rounded flex items-center justify-center">
@@ -17,8 +17,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-secondary-foreground/70 text-sm leading-relaxed max-w-md">
-              Leading manufacturer of premium tonneau covers and exterior accessories for pickup trucks. Serving the global automotive aftermarket with
-              quality and innovation.
+            
             </p>
           </div>
 
