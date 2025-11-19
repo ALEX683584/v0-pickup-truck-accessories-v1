@@ -12,7 +12,7 @@ const productGallery = [
     description2: "Lightweight & Drill-Free Installation",
     description3: "Water & Dust Resistance",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v1.jpg",
-    price: 299.99,
+    price: 179.99,
     features: ["Easy to operate", "Weather-resistant", "Lightweight", "Secure mounting"],
   },
   {
@@ -22,7 +22,7 @@ const productGallery = [
     description2: "Durable Soft Vinyl",
     description3: "Easy Clamp-On Installation",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v2.jpg",
-    price: 349.99,
+    price: 179.99,
     features: ["Sleek design", "Weather protection", "Tool-free installation", "Durable fabric"],
   },
   {
@@ -32,7 +32,7 @@ const productGallery = [
     description2: "Reinforced Vinyl Surface",
     description3: "Tool-Free, Pre-Assembled Installation",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v3.jpg",
-    price: 429.99,
+    price: 649.99,
     features: ["Partial access capability", "Folds for storage", "Secure locking", "UV resistant"],
   },
   {
@@ -42,7 +42,7 @@ const productGallery = [
     description2: "Low-Profile Appearance",
     description3: "Enhanced Security",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v8.jpg",
-    price: 599.99,
+    price: 799.99,
     features: ["Maximum security", "Rigid protection", "Low profile", "Lockable"],
   },
   {
