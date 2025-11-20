@@ -71,24 +71,24 @@ export function ShoppingCartSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {productGallery.map((product) => (
-            <Card key={product.id} className="overflow-hidden group hover:shadow-xl transition-shadow">
-              <div className="relative">
+            <Card key={product.id} className="overflow-hidden group hover:shadow-xl transition-shadow flex flex-col h-full">
+              <div className="relative flex-shrink-0">
                 <img
                   src={product.image}
                   alt={product.title}
                   className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <CardHeader>
+              <CardHeader className="flex-shrink-0">
                 <CardTitle className="text-lg">{product.title}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-2 mb-4">
+              <CardContent className="flex-grow flex flex-col">
+                <div className="space-y-2 mb-4 flex-grow">
                   <p className="text-muted-foreground text-sm">{product.description1}</p>
                   <p className="text-muted-foreground text-sm">{product.description2}</p>
                   <p className="text-muted-foreground text-sm">{product.description3}</p>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-end pt-4 mt-auto">
                   <span className="text-lg font-bold text-primary">${product.price.toFixed(2)}</span>
                   <Badge variant="secondary">In Stock</Badge>
                 </div>
