@@ -44,16 +44,16 @@ export function HeroSection() {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-primary-foreground/20">
             <div>
-              <div className="text-4xl font-bold text-primary-foreground mb-2">15+</div>
-              <div className="text-sm text-primary-foreground/70">Years Experience</div>
+              <div className="text-4xl font-bold text-primary-foreground mb-2">5</div>
+              <div className="text-sm text-primary-foreground/70">Products Selection</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-primary-foreground mb-2">50+</div>
-              <div className="text-sm text-primary-foreground/70">Countries Served</div>
+              <div className="text-4xl font-bold text-primary-foreground mb-2">24/7</div>
+              <div className="text-sm text-primary-foreground/70">Reply Within</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-primary-foreground mb-2">10K+</div>
-              <div className="text-sm text-primary-foreground/70">Happy Clients</div>
+              <div className="text-4xl font-bold text-primary-foreground mb-2">48H</div>
+              <div className="text-sm text-primary-foreground/70">Ships Within</div>
             </div>
           </div>
         </div>

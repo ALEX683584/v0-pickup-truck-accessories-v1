@@ -32,7 +32,7 @@ const productGallery = [
     description2: "Reinforced Vinyl Surface",
     description3: "Tool-Free, Pre-Assembled Installation",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v3.jpg",
-    price: 179.99,
+    price: 189.99,
     features: ["Partial access capability", "Folds for storage", "Secure locking", "UV resistant"],
   },
   {
