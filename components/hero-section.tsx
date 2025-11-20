@@ -53,7 +53,7 @@ export function HeroSection() {
             </div>
             <div>
               <div className="text-4xl font-bold text-primary-foreground mb-2">48H</div>
-              <div className="text-sm text-primary-foreground/70">Ships Within</div>
+              <div className="text-sm text-primary-foreground/70">Ship Within</div>
             </div>
           </div>
         </div>
