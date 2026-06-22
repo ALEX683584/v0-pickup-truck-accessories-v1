@@ -1,7 +1,6 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { ProductsSection } from "@/components/products-section"
-import { ShoppingCartSection } from "@/components/shopping-cart-section"
 import { AmazonGuideSection } from "@/components/amazon-guide-section"
 import { AmazonGuideLowProfileSection } from "@/components/amazon-guide-lowprofile-section"
 import { AmazonGuideTrifoldSection } from "@/components/amazon-guide-trifold-section"
@@ -16,7 +15,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <ProductsSection />
-        <ShoppingCartSection />
         <AmazonGuideSection />
         <AmazonGuideLowProfileSection />
         <AmazonGuideTrifoldSection />
