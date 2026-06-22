@@ -59,6 +59,9 @@ export function AmazonGuideSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Shop on Amazon</h2>
+          <h3 className="text-lg md:text-xl font-semibold tracking-wide text-primary uppercase mb-4">
+            SOFT ROLL-UP TONNEAU COVER
+          </h3>
           <p className="text-xl text-muted-foreground max-w-5xl mx-auto">
             Find our products on Amazon and order with fast, reliable shipping
           </p>
