@@ -1,7 +1,6 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 // Product data that matches the products-section exactly
 const productGallery = [
@@ -12,7 +11,6 @@ const productGallery = [
     description2: "Lightweight & Drill-Free Installation",
     description3: "Water & Dust Resistance",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v1.jpg",
-    price: 179.99,
     features: ["Easy to operate", "Weather-resistant", "Lightweight", "Secure mounting"],
   },
   {
@@ -22,7 +20,6 @@ const productGallery = [
     description2: "Durable Soft Vinyl",
     description3: "Easy Clamp-On Installation",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v2.jpg",
-    price: 209.99,
     features: ["Sleek design", "Weather protection", "Tool-free installation", "Durable fabric"],
   },
   {
@@ -32,7 +29,6 @@ const productGallery = [
     description2: "Reinforced Vinyl Surface",
     description3: "Tool-Free, Pre-Assembled Installation",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v3.jpg",
-    price: 189.99,
     features: ["Partial access capability", "Folds for storage", "Secure locking", "UV resistant"],
   },
   {
@@ -42,7 +38,6 @@ const productGallery = [
     description2: "Low-Profile Appearance",
     description3: "Enhanced Security",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v8.jpg",
-    price: 649.99,
     features: ["Maximum security", "Rigid protection", "Low profile", "Lockable"],
   },
   {
@@ -52,7 +47,6 @@ const productGallery = [
     description2: "Rigid Aluminum Hard Shell",
     description3: "Low-Profile Fit",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v9.jpg",
-    price: 799.99,
     features: ["Complete access", "Low profile", "Durable construction", "Easy operation"],
   },
 ];
@@ -88,9 +82,8 @@ export function ShoppingCartSection() {
                   <p className="text-muted-foreground text-sm">{product.description2}</p>
                   <p className="text-muted-foreground text-sm">{product.description3}</p>
                 </div>
-                <div className="flex justify-between items-end pt-4 mt-auto">
-                  <span className="text-lg font-bold text-primary">${product.price.toFixed(2)}</span>
-                  <Badge variant="secondary">In Stock</Badge>
+                <div className="flex justify-end items-end pt-4 mt-auto">
+                  <span className="text-sm text-muted-foreground">View details</span>
                 </div>
               </CardContent>
             </Card>
