@@ -28,3 +28,6 @@ next-env.d.ts
 
 # workbuddy local workspace
 .workbuddy/
+
+# pnpm (本项目使用 npm)
+pnpm-lock.yaml
