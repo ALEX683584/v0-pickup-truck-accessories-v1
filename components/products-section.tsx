@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
@@ -34,6 +35,7 @@ const products = [
     description3: "Enhanced Security",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v8.jpg",
     features: ["Maximum security", "Rigid protection", "Low profile", "Lockable"],
+    comingSoon: true,
   },
   {
     title: "Hard Flip-Up Low Profile Tonneau Cover",
@@ -42,6 +44,7 @@ const products = [
     description3: "Low-Profile Fit",
     image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v9.jpg",
     features: ["Complete access", "Low profile", "Durable construction", "Easy operation"],
+    comingSoon: true,
   },
 ]
 
@@ -72,7 +75,12 @@ export function ProductsSection() {
                   />
                 </div>
                 <div className="md:w-1/2 h-72 p-4 flex flex-col justify-center">
-                  <h3 className="text-xl font-bold text-foreground mb-2">{product.title}</h3>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-xl font-bold text-foreground">{product.title}</h3>
+                    {product.comingSoon && (
+                      <Badge variant="secondary" className="text-sm">Coming soon</Badge>
+                    )}
+                  </div>
                   <p className="text-muted-foreground text-xl mb-2 leading-relaxed mt-2">{product.description1}</p>
                   <p className="text-muted-foreground text-xl mb-2 leading-relaxed">{product.description2}</p>
                   <p className="text-muted-foreground text-xl mb-3 leading-relaxed">{product.description3}</p>
