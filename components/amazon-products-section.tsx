@@ -44,12 +44,9 @@ export function AmazonProductsSection({
               className="overflow-hidden group hover:shadow-xl transition-shadow flex flex-col h-full"
             >
               <CardHeader className="flex-shrink-0">
-                <CardTitle className="text-lg">{product.sku}</CardTitle>
+                <CardTitle className="text-lg leading-snug">{product.description}</CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow flex flex-col">
-                <p className="text-sm text-muted-foreground mb-6 flex-grow">
-                  {product.description}
-                </p>
+              <CardContent className="flex-grow flex flex-col mt-auto">
                 <a
                   href={product.url}
                   target="_blank"
