@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
@@ -21,15 +22,15 @@ export function HeroSection() {
           </h1>
 
           <p className="text-xl md:text-2xl text-primary-foreground/80 mb-8 max-w-2xl text-pretty leading-relaxed">
-            Top-quality tonneau covers and truck accessories—built to last and made to upgrade your ride.
+            Top-quality tonneau covers and truck accessories — built to last and made to upgrade your ride.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg h-14 px-8">
-              <a href="#products">
+              <Link href="/products">
                 View Products
                 <ArrowRight className="ml-2" size={20} />
-              </a>
+              </Link>
             </Button>
             <Button
               asChild
@@ -37,14 +38,14 @@ export function HeroSection() {
               variant="outline"
               className="text-lg h-14 px-8 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
             >
-              <a href="#contact">Request Quote</a>
+              <Link href="/contact">Request Quote</Link>
             </Button>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-primary-foreground/20">
             <div>
-              <div className="text-4xl font-bold text-primary-foreground mb-2">5</div>
+              <div className="text-4xl font-bold text-primary-foreground mb-2">5+</div>
               <div className="text-sm text-primary-foreground/70">Products Selection</div>
             </div>
             <div>

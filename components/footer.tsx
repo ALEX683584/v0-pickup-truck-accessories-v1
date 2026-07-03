@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -17,7 +19,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-secondary-foreground/70 text-sm leading-relaxed max-w-md">
-            
+              Top-quality tonneau covers and truck accessories — built to last and made to upgrade your ride.
             </p>
           </div>
 
@@ -26,30 +28,24 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                <Link href="/" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#products"
-                  className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors"
-                >
+                <Link href="/products" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
                   Products
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                <Link href="/about" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#contact"
-                  className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors"
-                >
+                <Link href="/contact" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -58,7 +54,31 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
-              <li className="text-sm text-secondary-foreground/70">Tonneau Covers</li>
+              <li>
+                <Link href="/products" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                  Soft Roll-up Tonneau Cover
+                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                  Soft Low Profile Tonneau Cover
+                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                  Soft Tri-fold Tonneau Cover
+                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                  Hard Tri-fold Cover
+                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                  Hard Flip-Up Cover
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -67,15 +87,15 @@ export function Footer() {
         <div className="pt-8 border-t border-secondary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-secondary-foreground/70">
-              © {currentYear} TOBEKIN TONNEAU COVER. All rights reserved.
+              &copy; {currentYear} TOBEKIN TONNEAU COVER. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+              <Link href="/contact" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+              </Link>
+              <Link href="/contact" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>

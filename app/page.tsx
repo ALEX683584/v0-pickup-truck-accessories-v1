@@ -1,28 +1,15 @@
-import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
-import { ProductsSection } from "@/components/products-section"
-import { AmazonGuideSection } from "@/components/amazon-guide-section"
-import { AmazonGuideLowProfileSection } from "@/components/amazon-guide-lowprofile-section"
-import { AmazonGuideTrifoldSection } from "@/components/amazon-guide-trifold-section"
-import { AboutSection } from "@/components/about-section"
-import { ContactSection } from "@/components/contact-section"
-import { Footer } from "@/components/footer"
+import { FeaturedProducts } from "@/components/featured-products"
+import { WhyChooseUs } from "@/components/why-choose-us"
+import { CtaSection } from "@/components/cta-section"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <HeroSection />
-        <ProductsSection />
-        <AmazonGuideSection />
-        <AmazonGuideLowProfileSection />
-        <AmazonGuideTrifoldSection />
-
-        <ContactSection />
-      </main>
-      <AboutSection />
-      <Footer />
-    </div>
+    <>
+      <HeroSection />
+      <FeaturedProducts />
+      <WhyChooseUs />
+      <CtaSection />
+    </>
   )
 }
