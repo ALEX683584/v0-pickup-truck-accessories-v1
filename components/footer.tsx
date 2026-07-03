@@ -50,33 +50,28 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Products */}
+          {/* Legal */}
           <div>
-            <h3 className="font-semibold mb-4">Products</h3>
+            <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/products" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                  Soft Roll-up Tonneau Cover
+                <Link href="/privacy" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                  Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                  Soft Low Profile Tonneau Cover
+                <Link href="/terms" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                  Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                  Soft Tri-fold Tonneau Cover
+                <Link href="/returns" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                  Return Policy
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                  Hard Tri-fold Cover
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                  Hard Flip-Up Cover
+                <Link href="/warranty" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                  Warranty Policy
                 </Link>
               </li>
             </ul>
@@ -89,14 +84,9 @@ export function Footer() {
             <p className="text-sm text-secondary-foreground/70">
               &copy; {currentYear} TOBEKIN TONNEAU COVER. All rights reserved.
             </p>
-            <div className="flex gap-6">
-              <Link href="/contact" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/contact" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                Terms of Service
-              </Link>
-            </div>
+            <p className="text-xs text-secondary-foreground/60">
+              As an Amazon Associate, we earn from qualifying purchases.
+            </p>
           </div>
         </div>
       </div>

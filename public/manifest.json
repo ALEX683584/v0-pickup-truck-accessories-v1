@@ -1,0 +1,22 @@
+{
+  "name": "TOBEKIN TONNEAU COVER",
+  "short_name": "TOBEKIN",
+  "description": "Premium Tonneau Covers & Truck Accessories",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ]
+}

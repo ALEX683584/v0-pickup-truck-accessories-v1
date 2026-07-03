@@ -7,7 +7,13 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, CheckCircle2, AlertCircle, Loader2 } from "lucide-react"
+
+interface FormErrors {
+  name?: string
+  email?: string
+  message?: string
+}
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -18,24 +24,49 @@ export function ContactSection() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
+  const [errors, setErrors] = useState<FormErrors>({})
+  const [errorMessage, setErrorMessage] = useState("")
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("[v0] Form submitted:", formData)
-    // Handle form submission
-    alert("Thank you for your inquiry! We will contact you soon.")
-    
-    // Create tracking pixel with form data
-    const trackingUrl = `https://pixeltrack-worker.laifa.xin/track/iJ0NjcR_.jpeg?e=${encodeURIComponent(formData.email)}&p=${encodeURIComponent(formData.phone)}&n=${encodeURIComponent(formData.name)}&m=${encodeURIComponent(formData.message)}&c1=${encodeURIComponent(formData.pickupModel)}`
-    
-    // Create and append the tracking image
-    const trackingImg = new Image()
-    trackingImg.src = trackingUrl
-    
-    setFormData({ name: "", email: "", pickupModel: "", phone: "", message: "" })
+    setStatus("submitting")
+    setErrors({})
+    setErrorMessage("")
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await res.json()
+
+      if (!res.ok || !data.ok) {
+        if (data.errors) {
+          setErrors(data.errors)
+        }
+        setErrorMessage(data.error || "Failed to send message. Please try again.")
+        setStatus("error")
+        return
+      }
+
+      setStatus("success")
+      setFormData({ name: "", email: "", pickupModel: "", phone: "", message: "" })
+    } catch (err) {
+      console.error("Contact form error:", err)
+      setErrorMessage("Network error. Please check your connection and try again.")
+      setStatus("error")
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
+    // Clear field-level error when user types
+    if (errors[e.target.name as keyof FormErrors]) {
+      setErrors({ ...errors, [e.target.name]: undefined })
+    }
   }
 
   return (
@@ -107,84 +138,135 @@ export function ContactSection() {
           {/* Contact Form */}
           <Card className="lg:col-span-2">
             <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
+              {status === "success" ? (
+                <div className="flex flex-col items-center justify-center py-12 text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <CheckCircle2 className="text-green-600" size={32} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-2">Thank You!</h3>
+                  <p className="text-muted-foreground max-w-md">
+                    Your inquiry has been sent successfully. Our team will get back to you within 24 hours.
+                  </p>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="mt-6"
+                    onClick={() => setStatus("idle")}
+                  >
+                    Send Another Message
+                  </Button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {status === "error" && errorMessage && (
+                    <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-lg">
+                      <AlertCircle className="text-red-600 flex-shrink-0 mt-0.5" size={20} />
+                      <p className="text-sm text-red-800">{errorMessage}</p>
+                    </div>
+                  )}
+
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                        Name *
+                      </label>
+                      <Input
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        placeholder="Your name"
+                        className={errors.name ? "border-red-500" : ""}
+                      />
+                      {errors.name && (
+                        <p className="text-xs text-red-600 mt-1">{errors.name}</p>
+                      )}
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                        Email *
+                      </label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        placeholder="your@email.com"
+                        className={errors.email ? "border-red-500" : ""}
+                      />
+                      {errors.email && (
+                        <p className="text-xs text-red-600 mt-1">{errors.email}</p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="pickupModel" className="block text-sm font-medium text-foreground mb-2">
+                        Pickup Model
+                      </label>
+                      <Input
+                        id="pickupModel"
+                        name="pickupModel"
+                        value={formData.pickupModel}
+                        onChange={handleChange}
+                        placeholder="Your pickup model"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                        Phone
+                      </label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="+1 (555) 000-0000"
+                      />
+                    </div>
+                  </div>
+
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                      Name *
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                      Message *
                     </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
                       onChange={handleChange}
                       required
-                      placeholder="Your name"
+                      rows={6}
+                      placeholder="Tell us about your project, quantity requirements, and any specific needs..."
+                      className={errors.message ? "border-red-500" : ""}
                     />
+                    {errors.message && (
+                      <p className="text-xs text-red-600 mt-1">{errors.message}</p>
+                    )}
                   </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                      Email *
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
 
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="pickupModel" className="block text-sm font-medium text-foreground mb-2">
-                      Pickup Model
-                    </label>
-                    <Input
-                      id="pickupModel"
-                      name="pickupModel"
-                      value={formData.pickupModel}
-                      onChange={handleChange}
-                      placeholder="Your pickup model"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                      Phone
-                    </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="+1 (555) 000-0000"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                    Message *
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    placeholder="Tell us about your project, quantity requirements, and any specific needs..."
-                  />
-                </div>
-
-                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
-                  Send Inquiry
-                </Button>
-              </form>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full bg-primary hover:bg-primary/90"
+                    disabled={status === "submitting"}
+                  >
+                    {status === "submitting" ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      "Send Inquiry"
+                    )}
+                  </Button>
+                </form>
+              )}
             </CardContent>
           </Card>
         </div>
