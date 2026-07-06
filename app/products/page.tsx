@@ -3,6 +3,7 @@ import { ProductsSection } from "@/components/products-section"
 import { AmazonGuideSection } from "@/components/amazon-guide-section"
 import { AmazonGuideLowProfileSection } from "@/components/amazon-guide-lowprofile-section"
 import { AmazonGuideTrifoldSection } from "@/components/amazon-guide-trifold-section"
+import { ProductsPageBanner } from "@/components/products-page-banner"
 
 export const metadata: Metadata = {
   title: "Products | TOBEKIN TONNEAU COVER",
@@ -54,6 +55,7 @@ export default function ProductsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
+      <ProductsPageBanner />
       <ProductsSection />
       <AmazonGuideSection />
       <AmazonGuideLowProfileSection />
