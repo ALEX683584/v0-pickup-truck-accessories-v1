@@ -10,7 +10,7 @@ const featuredProducts = [
     description1: "Easy Roll-Up Operation",
     description2: "Lightweight & Drill-Free Installation",
     description3: "Water & Dust Resistance",
-    image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v1.jpg",
+    image: "/products/v1.jpg",
     comingSoon: false,
   },
   {
@@ -18,7 +18,7 @@ const featuredProducts = [
     description1: "Low-Profile Design",
     description2: "Durable Soft Vinyl",
     description3: "Easy Clamp-On Installation",
-    image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v2.jpg",
+    image: "/products/v2.jpg",
     comingSoon: false,
   },
   {
@@ -26,7 +26,7 @@ const featuredProducts = [
     description1: "Tri-Fold Structure",
     description2: "Reinforced Vinyl Surface",
     description3: "Tool-Free, Pre-Assembled Installation",
-    image: "https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/v3.jpg",
+    image: "/products/v3.jpg",
     comingSoon: false,
   },
 ]

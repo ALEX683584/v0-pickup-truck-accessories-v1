@@ -7,7 +7,7 @@ export function HeroSection() {
     <section id="home" className="relative h-[1000px] flex items-center hero-gradient">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-20">
-        <img src="https://raw.githubusercontent.com/ALEX683584/special-octo-journey/main/img/pack%E5%8F%8D%E8%BD%AC.png" alt="Pickup truck" className="w-full h-full object-cover" />
+        <img src="/products/hero-bg.png" alt="Pickup truck" className="w-full h-full object-cover" />
       </div>
 
       {/* Content */}

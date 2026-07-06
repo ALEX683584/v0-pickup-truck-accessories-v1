@@ -110,7 +110,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Call Us</h3>
-                    <a href="tel:+19032196829" className="text-muted-foreground hover:text-primary transition-colors">
+                    <a href="tel:+8619032196829" className="text-muted-foreground hover:text-primary transition-colors">
                       +86 190-3219-6829
                     </a>
                   </div>

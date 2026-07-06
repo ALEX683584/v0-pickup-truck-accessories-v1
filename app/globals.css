@@ -76,8 +76,8 @@
 
 @theme inline {
   /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-mono: ui-monospace, monospace;
+  --font-sans: var(--font-geist-sans), "Inter", system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
   /* Color System - Industrial/Automotive B2B Theme */
   --color-background: 250 250 250;

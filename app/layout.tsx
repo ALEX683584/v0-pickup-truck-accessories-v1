@@ -6,8 +6,14 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+});
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tobekin.com'
 const SITE_NAME = 'TOBEKIN TONNEAU COVER'
@@ -101,9 +107,42 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/favicon.svg`,
+    description: SITE_DESCRIPTION,
+    email: "support@tobekin.com",
+    telephone: "+86-190-3219-6829",
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "Zhejiang",
+      addressCountry: "CN",
+    },
+    sameAs: [],
+  }
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_URL,
+    description: SITE_DESCRIPTION,
+  }
+
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <Header />
         <main className="pt-[90px]">
           {children}
