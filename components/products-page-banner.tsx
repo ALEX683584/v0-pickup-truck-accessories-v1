@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function ProductsPageBanner() {
   return (
-    <section className="w-full bg-black">
+    <section className="w-full bg-white">
       <div className="mx-auto max-w-[1300px]">
         <div className="relative w-full aspect-[1300/520] overflow-hidden">
           <Image
