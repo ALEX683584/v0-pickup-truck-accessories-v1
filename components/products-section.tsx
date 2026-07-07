@@ -61,7 +61,7 @@ export function ProductsSection() {
         </div>
 
         {/* Products List - Vertical Layout */}
-        <div className="space-y-8 max-w-[1200px] mx-auto">
+        <div className="space-y-8">
           {products.map((product, index) => (
             <Card key={index} className="overflow-hidden group hover:shadow-xl transition-shadow">
               <div className="flex flex-col md:flex-row">

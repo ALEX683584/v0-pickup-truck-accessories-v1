@@ -157,6 +157,13 @@
   }
 }
 
+/* Override container: unified site max-width (1300px) */
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 1300px;
+}
+
 /* Smooth scrolling for navigation */
 html {
   scroll-behavior: smooth;

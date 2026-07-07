@@ -42,7 +42,7 @@ export function FeaturedProducts() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featuredProducts.map((product, index) => (
             <Card key={index} className="overflow-hidden group hover:shadow-xl transition-shadow flex flex-col h-full">
               <div className="relative h-56 overflow-hidden">
