@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tobekin.com'
 const SITE_NAME = 'TOBEKIN TONNEAU COVER'
 const SITE_DESCRIPTION = 'Premium tonneau covers and exterior accessories for pickup trucks. Soft roll-up, low profile, tri-fold, and hard covers available. Shop on Amazon with fast shipping.'
+const GTM_ID = 'GTM-5HC78855'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -134,7 +135,26 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`,
+          }}
+        />
+      </head>
       <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
