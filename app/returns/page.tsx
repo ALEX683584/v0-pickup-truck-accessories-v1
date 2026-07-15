@@ -1,8 +1,20 @@
 import type { Metadata } from "next"
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tobekin.com"
+const RETURNS_URL = `${SITE_URL}/returns`
+const RETURNS_DESCRIPTION = "Review TOBEKIN return guidance for pickup truck tonneau covers purchased through Amazon, including return steps, shipping, refunds, and damaged items."
+
 export const metadata: Metadata = {
   title: "Return Policy",
-  description: "Return Policy for our pickup truck accessories products.",
+  description: RETURNS_DESCRIPTION,
+  alternates: {
+    canonical: RETURNS_URL,
+  },
+  openGraph: {
+    url: RETURNS_URL,
+    title: "Return Policy | TOBEKIN TONNEAU COVER",
+    description: RETURNS_DESCRIPTION,
+  },
 }
 
 export default function ReturnsPage() {

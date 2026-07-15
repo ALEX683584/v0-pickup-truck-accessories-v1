@@ -2,9 +2,21 @@ import type { Metadata } from "next"
 import { WhyChooseUs } from "@/components/why-choose-us"
 import { Factory, Globe, Users, Award } from "lucide-react"
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tobekin.com"
+const ABOUT_URL = `${SITE_URL}/about`
+const ABOUT_DESCRIPTION = "Learn about TOBEKIN, a tonneau cover manufacturer focused on durable truck bed covers, reliable fitment, quality control, and customer support."
+
 export const metadata: Metadata = {
-  title: "About Us | TOBEKIN TONNEAU COVER",
-  description: "Learn about TOBEKIN — a premium tonneau cover manufacturer dedicated to quality, innovation, and customer satisfaction.",
+  title: "About Us",
+  description: ABOUT_DESCRIPTION,
+  alternates: {
+    canonical: ABOUT_URL,
+  },
+  openGraph: {
+    url: ABOUT_URL,
+    title: "About Us | TOBEKIN TONNEAU COVER",
+    description: ABOUT_DESCRIPTION,
+  },
 }
 
 const stats = [

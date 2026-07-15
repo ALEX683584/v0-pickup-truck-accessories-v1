@@ -1,9 +1,21 @@
 import type { Metadata } from "next"
 import { ContactSection } from "@/components/contact-section"
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tobekin.com"
+const CONTACT_URL = `${SITE_URL}/contact`
+const CONTACT_DESCRIPTION = "Contact TOBEKIN for tonneau cover fitment questions, product support, truck bed cover inquiries, and Amazon order guidance."
+
 export const metadata: Metadata = {
-  title: "Contact Us | TOBEKIN TONNEAU COVER",
-  description: "Get in touch with TOBEKIN. Send us an inquiry and our team will respond within 24 hours.",
+  title: "Contact Us",
+  description: CONTACT_DESCRIPTION,
+  alternates: {
+    canonical: CONTACT_URL,
+  },
+  openGraph: {
+    url: CONTACT_URL,
+    title: "Contact Us | TOBEKIN TONNEAU COVER",
+    description: CONTACT_DESCRIPTION,
+  },
 }
 
 export default function ContactPage() {

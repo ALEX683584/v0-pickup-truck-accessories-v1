@@ -1,8 +1,20 @@
 import type { Metadata } from "next"
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tobekin.com"
+const WARRANTY_URL = `${SITE_URL}/warranty`
+const WARRANTY_DESCRIPTION = "Read TOBEKIN warranty guidance for soft roll-up, low-profile, tri-fold, and hard tonneau covers, including coverage, exclusions, and claim steps."
+
 export const metadata: Metadata = {
   title: "Warranty Policy",
-  description: "Warranty Policy for our pickup truck accessories products.",
+  description: WARRANTY_DESCRIPTION,
+  alternates: {
+    canonical: WARRANTY_URL,
+  },
+  openGraph: {
+    url: WARRANTY_URL,
+    title: "Warranty Policy | TOBEKIN TONNEAU COVER",
+    description: WARRANTY_DESCRIPTION,
+  },
 }
 
 export default function WarrantyPage() {

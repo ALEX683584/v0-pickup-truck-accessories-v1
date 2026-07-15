@@ -1,8 +1,18 @@
 import type { Metadata } from "next"
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tobekin.com"
+const TERMS_URL = `${SITE_URL}/terms`
+
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "Terms of Service for our pickup truck accessories website.",
+  alternates: {
+    canonical: TERMS_URL,
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 }
 
 export default function TermsPage() {

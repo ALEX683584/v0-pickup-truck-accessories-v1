@@ -1,8 +1,18 @@
 import type { Metadata } from "next"
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tobekin.com"
+const PRIVACY_URL = `${SITE_URL}/privacy`
+
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy Policy for our pickup truck accessories website.",
+  alternates: {
+    canonical: PRIVACY_URL,
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 }
 
 export default function PrivacyPage() {

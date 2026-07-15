@@ -6,9 +6,34 @@ import { AmazonGuideTrifoldSection } from "@/components/amazon-guide-trifold-sec
 import { ProductsPageBanner } from "@/components/products-page-banner"
 import { ProductFeatureScroller } from "@/components/product-feature-scroller"
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tobekin.com"
+const PRODUCTS_URL = `${SITE_URL}/products`
+const PRODUCTS_DESCRIPTION = "Browse TOBEKIN tonneau covers for pickup trucks, including soft roll-up, low-profile, tri-fold, hard tri-fold, and flip-up truck bed covers for major models."
+
 export const metadata: Metadata = {
-  title: "Products | TOBEKIN TONNEAU COVER",
-  description: "Browse our full catalog of premium tonneau covers — soft roll-up, low profile, tri-fold, and hard covers for all major truck models.",
+  title: "Tonneau Covers for Pickup Trucks",
+  description: PRODUCTS_DESCRIPTION,
+  alternates: {
+    canonical: PRODUCTS_URL,
+  },
+  openGraph: {
+    url: PRODUCTS_URL,
+    title: "Tonneau Covers for Pickup Trucks | TOBEKIN TONNEAU COVER",
+    description: PRODUCTS_DESCRIPTION,
+    images: [
+      {
+        url: "/products-banner.jpg",
+        width: 1300,
+        height: 520,
+        alt: "TOBEKIN tonneau covers for pickup trucks",
+      },
+    ],
+  },
+  twitter: {
+    title: "Tonneau Covers for Pickup Trucks | TOBEKIN",
+    description: PRODUCTS_DESCRIPTION,
+    images: ["/products-banner.jpg"],
+  },
 }
 
 const productFeatures = [
@@ -49,36 +74,67 @@ export default function ProductsPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "TOBEKIN Tonneau Covers",
+    url: PRODUCTS_URL,
     itemListElement: [
       {
         "@type": "ListItem",
         position: 1,
-        name: "Soft Roll-up Tonneau Cover",
-        description: "Easy roll-up operation, lightweight & drill-free installation, water & dust resistance.",
+        item: {
+          "@type": "Product",
+          name: "Soft Roll-up Tonneau Cover",
+          brand: { "@type": "Brand", name: "TOBEKIN" },
+          image: `${SITE_URL}/products/v1.jpg`,
+          description: "Easy roll-up tonneau cover with lightweight construction, drill-free installation, and water and dust resistance.",
+          category: "Truck Bed Cover",
+        },
       },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Soft Low Profile Tonneau Cover",
-        description: "Low-profile design, durable soft vinyl, easy clamp-on installation.",
+        item: {
+          "@type": "Product",
+          name: "Soft Low Profile Tonneau Cover",
+          brand: { "@type": "Brand", name: "TOBEKIN" },
+          image: `${SITE_URL}/products/v2.jpg`,
+          description: "Low-profile soft tonneau cover with durable vinyl, weather protection, and easy clamp-on installation.",
+          category: "Truck Bed Cover",
+        },
       },
       {
         "@type": "ListItem",
         position: 3,
-        name: "Soft Tri-fold Tonneau Cover",
-        description: "Tri-fold structure, reinforced vinyl surface, tool-free pre-assembled installation.",
+        item: {
+          "@type": "Product",
+          name: "Soft Tri-fold Tonneau Cover",
+          brand: { "@type": "Brand", name: "TOBEKIN" },
+          image: `${SITE_URL}/products/v3.jpg`,
+          description: "Soft tri-fold tonneau cover with reinforced vinyl surface and tool-free pre-assembled installation.",
+          category: "Truck Bed Cover",
+        },
       },
       {
         "@type": "ListItem",
         position: 4,
-        name: "Hard Tri-fold Low Profile Tonneau Cover",
-        description: "Hard tri-fold panels, low-profile appearance, enhanced security.",
+        item: {
+          "@type": "Product",
+          name: "Hard Tri-fold Low Profile Tonneau Cover",
+          brand: { "@type": "Brand", name: "TOBEKIN" },
+          image: `${SITE_URL}/products/v8.jpg`,
+          description: "Hard tri-fold low-profile tonneau cover with rigid panels, enhanced cargo security, and all-weather protection.",
+          category: "Truck Bed Cover",
+        },
       },
       {
         "@type": "ListItem",
         position: 5,
-        name: "Hard Flip-Up Low Profile Tonneau Cover",
-        description: "Flip-up panel system, rigid aluminum hard shell, low-profile fit.",
+        item: {
+          "@type": "Product",
+          name: "Hard Flip-Up Low Profile Tonneau Cover",
+          brand: { "@type": "Brand", name: "TOBEKIN" },
+          image: `${SITE_URL}/products/v9.jpg`,
+          description: "Hard flip-up low-profile tonneau cover with rigid aluminum-style panels, bed access, and durable protection.",
+          category: "Truck Bed Cover",
+        },
       },
     ],
   }
