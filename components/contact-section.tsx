@@ -290,9 +290,9 @@ export function ContactSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Get in Touch</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Send a B2B Purchase Inquiry</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Ready to discuss your project? Send us an inquiry and our team will respond within 24 hours.
+            Tell us about your wholesale, distributor, dealer, or bulk order needs. TOBEKIN supports B2B buyers looking for tonneau covers and pickup truck bed accessories.
           </p>
         </div>
 
@@ -358,7 +358,7 @@ export function ContactSection() {
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-2">Thank You!</h3>
                   <p className="text-muted-foreground max-w-md">
-                    Your inquiry has been sent successfully. Our team will get back to you within 24 hours.
+                    Your B2B inquiry has been sent successfully. Our team will review your quantity, fitment, and sourcing needs, then get back to you within 24 hours.
                   </p>
                   <Button
                     type="button"
@@ -381,7 +381,7 @@ export function ContactSection() {
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                        Name *
+                        Name / Company *
                       </label>
                       <Input
                         id="name"
@@ -389,7 +389,7 @@ export function ContactSection() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        placeholder="Your name"
+                        placeholder="Your name or company"
                         className={errors.name ? "border-red-500" : ""}
                       />
                       {errors.name && (
@@ -398,7 +398,7 @@ export function ContactSection() {
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                        Email *
+                        Business Email *
                       </label>
                       <Input
                         id="email"
@@ -407,7 +407,7 @@ export function ContactSection() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        placeholder="your@email.com"
+                        placeholder="buyer@company.com"
                         className={errors.email ? "border-red-500" : ""}
                       />
                       {errors.email && (
@@ -419,14 +419,14 @@ export function ContactSection() {
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="pickupModel" className="block text-sm font-medium text-foreground mb-2">
-                        Pickup Model
+                        Product / Pickup Model
                       </label>
                       <Input
                         id="pickupModel"
                         name="pickupModel"
                         value={formData.pickupModel}
                         onChange={handleChange}
-                        placeholder="Your pickup model"
+                        placeholder="e.g. Ford F-150 5.5 ft bed, soft roll-up cover"
                       />
                     </div>
                     <div>
@@ -445,8 +445,8 @@ export function ContactSection() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Message *
+                      <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                      B2B Inquiry Details *
                     </label>
                     <Textarea
                       id="message"
@@ -455,7 +455,7 @@ export function ContactSection() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      placeholder="Tell us about your project, quantity requirements, and any specific needs..."
+                      placeholder="Tell us your target quantity, market, product type, truck fitments, desired price range, and whether you are a wholesaler, dealer, distributor, Amazon seller, or fleet buyer."
                       className={errors.message ? "border-red-500" : ""}
                     />
                     {errors.message && (
@@ -475,7 +475,7 @@ export function ContactSection() {
                         Sending...
                       </>
                     ) : (
-                      "Send Inquiry"
+                      "Send B2B Inquiry"
                     )}
                   </Button>
                 </form>

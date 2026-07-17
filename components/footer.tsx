@@ -38,6 +38,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/truck-accessories" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                  Truck Accessories
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
                   About Us
                 </Link>

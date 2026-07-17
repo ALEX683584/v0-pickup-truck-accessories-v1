@@ -18,11 +18,11 @@ export function HeroSection() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 text-balance">
-            Premium Tonneau Covers
+            B2B Tonneau Truck Bed Covers
           </h1>
 
           <p className="text-xl md:text-2xl text-primary-foreground/80 mb-8 max-w-2xl text-pretty leading-relaxed">
-            Top-quality tonneau covers and truck accessories — built to last and made to upgrade your ride.
+            Premium truck bed covers for wholesalers, dealers, distributors, Amazon sellers, and bulk pickup accessory buyers.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -38,7 +38,7 @@ export function HeroSection() {
               variant="outline"
               className="text-lg h-14 px-8 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
             >
-              <Link href="/contact">Request Quote</Link>
+              <Link href="/contact">Request B2B Quote</Link>
             </Button>
           </div>
 
