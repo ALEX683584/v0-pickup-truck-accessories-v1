@@ -5,15 +5,29 @@ const WARRANTY_URL = `${SITE_URL}/warranty`
 const WARRANTY_DESCRIPTION = "Read TOBEKIN warranty guidance for soft roll-up, low-profile, tri-fold, and hard tonneau covers, including coverage, exclusions, and claim steps."
 
 export const metadata: Metadata = {
-  title: "Warranty Policy",
+  title: "Warranty Policy | TOBEKIN",
   description: WARRANTY_DESCRIPTION,
   alternates: {
     canonical: WARRANTY_URL,
   },
   openGraph: {
     url: WARRANTY_URL,
-    title: "Warranty Policy | TOBEKIN TONNEAU COVER",
+    title: "Warranty Policy | TOBEKIN",
     description: WARRANTY_DESCRIPTION,
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1216,
+        height: 749,
+        alt: 'TOBEKIN TONNEAU COVER — Warranty Policy',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Warranty Policy | TOBEKIN",
+    description: WARRANTY_DESCRIPTION,
+    images: ['/og-image.png'],
   },
 }
 

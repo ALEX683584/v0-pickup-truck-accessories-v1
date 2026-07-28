@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export interface ProductFeature {
   title: string
@@ -73,10 +74,12 @@ export function ProductFeatureScroller({ features }: ProductFeatureScrollerProps
               className="group flex-shrink-0 w-[calc((100%-4*24px)/5)] min-w-[220px]"
             >
               <div className="relative w-full aspect-[4/3] overflow-hidden rounded-md bg-muted mb-3">
-                <img
+                <Image
                   src={feature.image}
                   alt={feature.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 50vw, 220px"
                 />
               </div>
               <h3 className="text-base font-bold text-foreground mb-2 group-hover:text-primary transition-colors">

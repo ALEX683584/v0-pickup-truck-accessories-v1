@@ -44,26 +44,26 @@ const benefits = [
 ]
 
 export const metadata: Metadata = {
-  title: "B2B Aftermarket Truck Accessories",
+  title: "B2B Aftermarket Truck Accessories & Sourcing | TOBEKIN",
   description: PAGE_DESCRIPTION,
   alternates: {
     canonical: PAGE_URL,
   },
   openGraph: {
     url: PAGE_URL,
-    title: "B2B Aftermarket Truck Accessories | TOBEKIN TONNEAU COVER",
+    title: "B2B Aftermarket Truck Accessories & Sourcing | TOBEKIN",
     description: PAGE_DESCRIPTION,
     images: [
       {
         url: "/products-banner.jpg",
-        width: 1300,
-        height: 520,
+        width: 1774,
+        height: 887,
         alt: "TOBEKIN aftermarket truck accessories and tonneau covers",
       },
     ],
   },
   twitter: {
-    title: "B2B Aftermarket Truck Accessories | TOBEKIN",
+    title: "B2B Aftermarket Truck Accessories & Sourcing | TOBEKIN",
     description: PAGE_DESCRIPTION,
     images: ["/products-banner.jpg"],
   },
@@ -91,6 +91,57 @@ export default function TruckAccessoriesPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What are the most popular pickup truck bed accessories for B2B buyers?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Tonneau covers are the most popular pickup truck bed accessories for B2B sourcing. TOBEKIN offers soft roll-up, low-profile, tri-fold, and hard folding covers suitable for wholesale, dealer, and distributor catalogs.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Why should B2B buyers stock tonneau covers?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Tonneau covers improve cargo protection, reduce wind drag for better fuel efficiency, and provide a clean appearance. They are practical for daily commuting, jobsite storage, and weekend hauling, making them a high-demand aftermarket truck accessory.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is the difference between a soft and hard tonneau cover?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Soft tonneau covers use vinyl or fabric and are lighter, easier to install, and more affordable. Hard tonneau covers use rigid panels (usually aluminum) for greater security and durability. Both types are available from TOBEKIN for B2B purchase.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do TOBEKIN tonneau covers fit all pickup truck models?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "TOBEKIN tonneau covers are precision-engineered for specific truck models and bed sizes, including Ford F-150, Chevy Silverado, GMC Sierra, RAM 1500, Toyota Tundra, and more. Fitment details are available for each product.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do I submit a bulk or wholesale inquiry for truck accessories?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Use the TOBEKIN contact page to submit a B2B inquiry. Include your target quantity, truck fitments, product type, and buyer role (wholesaler, dealer, Amazon seller, distributor, or fleet buyer). Our team responds within 24 hours.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

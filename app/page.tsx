@@ -10,18 +10,18 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tobekin.com"
 const HOME_DESCRIPTION = "TOBEKIN supplies tonneau truck bed covers for B2B buyers, including wholesalers, dealers, distributors, Amazon sellers, and bulk pickup accessory buyers."
 
 export const metadata: Metadata = {
-  title: "B2B Tonneau Truck Bed Covers",
+  title: "B2B Tonneau Truck Bed Covers & Wholesale | TOBEKIN",
   alternates: {
     canonical: SITE_URL,
   },
   description: HOME_DESCRIPTION,
   openGraph: {
     url: SITE_URL,
-    title: "B2B Tonneau Truck Bed Covers | TOBEKIN TONNEAU COVER",
+    title: "B2B Tonneau Truck Bed Covers & Wholesale | TOBEKIN",
     description: HOME_DESCRIPTION,
   },
   twitter: {
-    title: "B2B Tonneau Truck Bed Covers | TOBEKIN",
+    title: "B2B Tonneau Truck Bed Covers & Wholesale | TOBEKIN",
     description: HOME_DESCRIPTION,
   },
 }

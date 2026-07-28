@@ -1,7 +1,6 @@
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
 
 const products = [
   {
@@ -54,9 +53,9 @@ export function ProductsSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Products</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">All Tonneau Cover Models</h2>
           <p className="text-xl text-muted-foreground max-w-5xl mx-auto text-pretty">
-            We specialize in high-quality tonneau covers you can trust.
+            Soft roll-up, low-profile, tri-fold, hard folding, and flip-up truck bed covers — compare all TOBEKIN B2B options.
           </p>
         </div>
 
@@ -66,12 +65,12 @@ export function ProductsSection() {
             <Card key={index} className="overflow-hidden group hover:shadow-xl transition-shadow">
               <div className="flex flex-col md:flex-row">
                 <div className="relative md:w-1/2 h-72">
-                  <img
+                  <Image
                     src={product.image || "/placeholder.svg"}
                     alt={product.title}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                    width={600}
-                    height={300}
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className="md:w-1/2 h-72 p-4 flex flex-col justify-center">

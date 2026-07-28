@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { WhyChooseUs } from "@/components/why-choose-us"
 import { Factory, Globe, Users, Award } from "lucide-react"
 
@@ -7,15 +8,29 @@ const ABOUT_URL = `${SITE_URL}/about`
 const ABOUT_DESCRIPTION = "Learn about TOBEKIN, a tonneau cover manufacturer focused on durable truck bed covers, reliable fitment, quality control, and customer support."
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About TOBEKIN | Tonneau Cover Manufacturer & B2B Supplier",
   description: ABOUT_DESCRIPTION,
   alternates: {
     canonical: ABOUT_URL,
   },
   openGraph: {
     url: ABOUT_URL,
-    title: "About Us | TOBEKIN TONNEAU COVER",
+    title: "About TOBEKIN | Tonneau Cover Manufacturer & B2B Supplier",
     description: ABOUT_DESCRIPTION,
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1216,
+        height: 749,
+        alt: 'TOBEKIN TONNEAU COVER — About Us',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "About TOBEKIN | Tonneau Cover Manufacturer",
+    description: ABOUT_DESCRIPTION,
+    images: ['/og-image.png'],
   },
 }
 
@@ -77,10 +92,12 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden">
-              <img
+              <Image
                 src="/pickup-truck-with-tonneau-cover-on-mountain-road.jpg"
-                alt="Pickup truck with tonneau cover"
-                className="w-full h-full object-cover"
+                alt="Pickup truck with TOBEKIN tonneau cover on mountain road"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>

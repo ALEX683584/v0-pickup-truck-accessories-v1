@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
@@ -36,9 +37,9 @@ export function FeaturedProducts() {
     <section className="py-24 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Products</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Featured Tonneau Covers</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-            We specialize in high-quality tonneau covers you can trust.
+            Soft roll-up, low-profile, and tri-fold truck bed covers for everyday B2B sourcing.
           </p>
         </div>
 
@@ -46,12 +47,12 @@ export function FeaturedProducts() {
           {featuredProducts.map((product, index) => (
             <Card key={index} className="overflow-hidden group hover:shadow-xl transition-shadow flex flex-col h-full">
               <div className="relative h-56 overflow-hidden">
-                <img
+                <Image
                   src={product.image || "/placeholder.svg"}
                   alt={product.title}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                  width={400}
-                  height={224}
+                  fill
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <CardContent className="p-6 flex flex-col flex-grow">

@@ -4,8 +4,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tobekin.com"
 const PRIVACY_URL = `${SITE_URL}/privacy`
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "Privacy Policy for our pickup truck accessories website.",
+  title: "Privacy Policy | TOBEKIN",
+  description: "Privacy Policy for TOBEKIN TONNEAU COVER — how we collect, use, and protect your information.",
   alternates: {
     canonical: PRIVACY_URL,
   },

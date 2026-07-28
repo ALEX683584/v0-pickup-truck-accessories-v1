@@ -6,21 +6,62 @@ const CONTACT_URL = `${SITE_URL}/contact`
 const CONTACT_DESCRIPTION = "Send a B2B inquiry to TOBEKIN for wholesale tonneau covers, dealer pricing, bulk truck bed cover orders, fitment support, and supplier information."
 
 export const metadata: Metadata = {
-  title: "B2B Tonneau Cover Inquiry",
+  title: "B2B Tonneau Cover Inquiry & Sourcing | TOBEKIN",
   description: CONTACT_DESCRIPTION,
   alternates: {
     canonical: CONTACT_URL,
   },
   openGraph: {
     url: CONTACT_URL,
-    title: "B2B Tonneau Cover Inquiry | TOBEKIN TONNEAU COVER",
+    title: "B2B Tonneau Cover Inquiry & Sourcing | TOBEKIN",
     description: CONTACT_DESCRIPTION,
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1216,
+        height: 749,
+        alt: 'TOBEKIN TONNEAU COVER — B2B Inquiry',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "B2B Tonneau Cover Inquiry & Sourcing | TOBEKIN",
+    description: CONTACT_DESCRIPTION,
+    images: ['/og-image.png'],
   },
 }
 
 export default function ContactPage() {
+  const contactPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "B2B Tonneau Cover Inquiry — TOBEKIN",
+    url: CONTACT_URL,
+    description: CONTACT_DESCRIPTION,
+    mainEntity: {
+      "@type": "Organization",
+      name: "TOBEKIN TONNEAU COVER",
+      url: "https://www.tobekin.com",
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          contactType: "sales",
+          email: "support@tobekin.com",
+          telephone: "+86-190-3219-6829",
+          availableLanguage: ["English", "Chinese"],
+          areaServed: "Worldwide",
+        },
+      ],
+    },
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageJsonLd) }}
+      />
       {/* Page Header */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">

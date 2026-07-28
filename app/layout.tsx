@@ -17,13 +17,13 @@ const geistMono = Geist_Mono({
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tobekin.com'
 const SITE_NAME = 'TOBEKIN TONNEAU COVER'
-const SITE_DESCRIPTION = 'Premium tonneau covers and exterior accessories for pickup trucks. Soft roll-up, low profile, tri-fold, and hard covers available. Shop on Amazon with fast shipping.'
+const SITE_DESCRIPTION = 'Premium tonneau covers for pickup trucks — soft roll-up, low profile, tri-fold, and hard covers. B2B wholesale & dealer inquiries welcome.'
 const GTM_ID = 'GTM-5HC78855'
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#0F172A',
+  themeColor: '#DC2626',
 }
 
 export const metadata: Metadata = {
@@ -54,7 +54,6 @@ export const metadata: Metadata = {
     'bulk truck bed covers',
     'dealer tonneau cover inquiry',
     'truck accessories',
-    'pickup truck accessories',
     'truck bed accessories',
     'aftermarket truck parts',
     'TOBEKIN',
@@ -68,7 +67,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  generator: 'v0.app',
+  generator: 'Next.js',
   applicationName: SITE_NAME,
   referrer: 'origin-when-cross-origin',
   robots: {
@@ -91,7 +90,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/og-image.png',
-        width: 1200,
+        width: 1216,
         height: 749,
         alt: `${SITE_NAME} - Premium Tonneau Covers & Truck Accessories`,
         type: 'image/png',
@@ -136,7 +135,9 @@ export default function RootLayout({
       addressRegion: "Zhejiang",
       addressCountry: "CN",
     },
-    sameAs: [],
+    sameAs: [
+      'https://www.amazon.com/stores/TOBEKIN',
+    ],
   }
 
   const websiteJsonLd = {

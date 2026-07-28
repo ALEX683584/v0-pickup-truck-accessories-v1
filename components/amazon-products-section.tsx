@@ -29,9 +29,9 @@ export function AmazonProductsSection({
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{title}</h2>
-          <h3 className="text-lg md:text-xl font-semibold tracking-wide text-primary uppercase mb-4">
+          <p className="text-lg md:text-xl font-semibold tracking-wide text-primary uppercase mb-4">
             {subtitle}
-          </h3>
+          </p>
           <p className="text-xl text-muted-foreground max-w-5xl mx-auto">
             Find our products on Amazon and order with fast, reliable shipping
           </p>
@@ -50,7 +50,7 @@ export function AmazonProductsSection({
                 <a
                   href={product.url}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel={"sponsored noopener noreferrer"}
                   className="mt-auto"
                 >
                   <Button className="w-full" variant="default">

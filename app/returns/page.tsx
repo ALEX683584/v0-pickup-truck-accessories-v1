@@ -5,15 +5,29 @@ const RETURNS_URL = `${SITE_URL}/returns`
 const RETURNS_DESCRIPTION = "Review TOBEKIN return guidance for pickup truck tonneau covers purchased through Amazon, including return steps, shipping, refunds, and damaged items."
 
 export const metadata: Metadata = {
-  title: "Return Policy",
+  title: "Return Policy | TOBEKIN",
   description: RETURNS_DESCRIPTION,
   alternates: {
     canonical: RETURNS_URL,
   },
   openGraph: {
     url: RETURNS_URL,
-    title: "Return Policy | TOBEKIN TONNEAU COVER",
+    title: "Return Policy | TOBEKIN",
     description: RETURNS_DESCRIPTION,
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1216,
+        height: 749,
+        alt: 'TOBEKIN TONNEAU COVER — Return Policy',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Return Policy | TOBEKIN",
+    description: RETURNS_DESCRIPTION,
+    images: ['/og-image.png'],
   },
 }
 

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
@@ -7,7 +8,14 @@ export function HeroSection() {
     <section id="home" className="relative h-[1000px] flex items-center hero-gradient">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-20">
-        <img src="/products/hero-bg.png" alt="Pickup truck" className="w-full h-full object-cover" />
+        <Image
+          src="/products/hero-bg.png"
+          alt="Pickup truck with tonneau cover"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
       </div>
 
       {/* Content */}
