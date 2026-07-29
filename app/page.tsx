@@ -37,10 +37,7 @@ export default function Home() {
               B2B Tonneau Truck Bed Covers Built for Real-World Use
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              TOBEKIN designs tonneau truck bed covers for B2B buyers serving pickup owners who want reliable cargo protection without complicated installation. Our lineup includes soft roll-up tonneau covers for everyday convenience, low-profile tonneau covers for a cleaner factory-style look, soft tri-fold covers for fast bed access, and hard folding tonneau covers for added security.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Each pickup truck bed cover is engineered around fitment, weather resistance, and simple clamp-on installation for popular models including Ford F-150, Chevy Silverado, GMC Sierra, Toyota Tacoma, Dodge Ram, Honda Ridgeline, Jeep Gladiator, and Ford Maverick. Wholesalers, dealers, distributors, Amazon sellers, and fleet buyers can send a B2B inquiry for product options, bulk order needs, and sourcing details.
+              TOBEKIN designs durable, clamp-on tonneau covers for B2B buyers. Our lineup includes soft roll-up, low-profile, soft tri-fold, and hard folding options engineered for weather-resistant fitment on Ford F-150, Chevy Silverado, RAM, Tacoma, and more. Wholesalers, dealers, and Amazon sellers: send a B2B inquiry for bulk pricing and sourcing details.
             </p>
           </div>
         </div>
