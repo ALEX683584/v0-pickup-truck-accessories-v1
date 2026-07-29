@@ -219,7 +219,7 @@ export default function ProductsPage() {
               Compare B2B Pickup Truck Bed Cover Styles
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Use this guide to compare tonneau truck bed covers for wholesale catalogs, dealer programs, distributor sourcing, Amazon listings, and bulk pickup accessory inquiries. TOBEKIN focuses on practical truck bed covers that are easy to quote, easy to explain, and easy to install.
+              Compare practical truck bed covers designed for easy sourcing and installation. Ideal for wholesale, dealer programs, and bulk B2B purchases.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">

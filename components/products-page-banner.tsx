@@ -7,7 +7,7 @@ export function ProductsPageBanner() {
             B2B Truck Bed Covers &amp; Tonneau Covers
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-pretty">
-            Compare TOBEKIN soft roll-up, low-profile, soft folding, hard folding, and flip-up tonneau covers for wholesale, dealer, distributor, and bulk pickup accessory inquiries.
+            Source TOBEKIN soft roll-up, low-profile, tri-fold, and hard tonneau covers. Engineered for popular pickups and available for wholesale, dealer, and bulk B2B inquiries.
           </p>
         </div>
       </div>
