@@ -211,27 +211,6 @@ export default function ProductsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
-      <ProductsPageBanner />
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Compare B2B Pickup Truck Bed Cover Styles
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Compare practical truck bed covers designed for easy sourcing and installation. Ideal for wholesale, dealer programs, and bulk B2B purchases.
-            </p>
-          </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            {keywordSections.map((section) => (
-              <div key={section.title} className="space-y-3">
-                <h3 className="text-xl font-bold text-foreground">{section.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{section.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
       <ProductFeatureScroller features={productFeatures} />
       <ProductsSection />
       <AmazonGuideSection />
