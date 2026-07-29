@@ -43,20 +43,20 @@ const stats = [
 
 const values = [
   {
-    title: "Quality First",
-    description: "Every tonneau cover undergoes rigorous testing — from material selection to final fitment verification. We never compromise on durability.",
+    title: "Quality Control",
+    description: "We enforce strict testing at our factory, verifying every batch for weatherproofing, hinge durability, and precise bed-rail fitment before packaging.",
   },
   {
-    title: "Customer Focused",
-    description: "Real people, real answers. Our support team knows trucks inside out and is ready to help you find the perfect cover for your vehicle.",
+    title: "B2B Support",
+    description: "We support distributors, wholesalers, and Amazon sellers with dedicated product data, replacement parts, and flexible sourcing options.",
   },
   {
-    title: "Continuous Innovation",
-    description: "From drill-free installation systems to advanced weather-resistant materials, we constantly push the boundaries of what a tonneau cover can be.",
+    title: "Manufacturing Efficiency",
+    description: "Our integrated production lines allow us to maintain shorter lead times and ensure consistent quality on bulk orders.",
   },
   {
-    title: "Global Reach",
-    description: "Based in Zhejiang, China, we serve customers worldwide with fast shipping and reliable delivery to over 30 countries.",
+    title: "Global Supply Chain",
+    description: "With shipments to over 30 countries, we cooperate with major freight networks to deliver secure bulk cargo to ports worldwide.",
   },
 ]
 
@@ -120,9 +120,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Why Choose Us */}
-      <WhyChooseUs />
 
       {/* Values */}
       <section className="py-24 bg-muted/50">

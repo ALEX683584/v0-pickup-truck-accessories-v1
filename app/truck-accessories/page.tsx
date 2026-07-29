@@ -243,30 +243,7 @@ export default function TruckAccessoriesPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
-              Popular Pickup Truck Accessory Searches
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {[
-                "aftermarket truck accessories",
-                "pickup truck accessories",
-                "truck bed accessories",
-                "truck accessories for cargo protection",
-                "soft roll-up tonneau cover",
-                "hard folding tonneau cover",
-              ].map((term) => (
-                <div key={term} className="flex items-center gap-3 rounded-lg border border-border p-4">
-                  <CheckCircle2 className="text-primary shrink-0" size={20} />
-                  <span className="text-foreground font-medium">{term}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+
     </>
   )
 }
