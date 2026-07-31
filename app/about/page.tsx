@@ -8,7 +8,9 @@ const ABOUT_URL = `${SITE_URL}/about`
 const ABOUT_DESCRIPTION = "Learn about TOBEKIN, a tonneau cover manufacturer focused on durable truck bed covers, reliable fitment, quality control, and customer support."
 
 export const metadata: Metadata = {
-  title: "About TOBEKIN | Tonneau Cover Manufacturer & B2B Supplier",
+  title: {
+    absolute: "About TOBEKIN | Tonneau Cover Manufacturer & B2B Supplier",
+  },
   description: ABOUT_DESCRIPTION,
   alternates: {
     canonical: ABOUT_URL,

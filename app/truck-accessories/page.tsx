@@ -44,14 +44,14 @@ const benefits = [
 ]
 
 export const metadata: Metadata = {
-  title: "B2B Aftermarket Truck Accessories & Sourcing | TOBEKIN",
+  title: "B2B Aftermarket Truck Accessories & Sourcing",
   description: PAGE_DESCRIPTION,
   alternates: {
     canonical: PAGE_URL,
   },
   openGraph: {
     url: PAGE_URL,
-    title: "B2B Aftermarket Truck Accessories & Sourcing | TOBEKIN",
+    title: "B2B Aftermarket Truck Accessories & Sourcing | TOBEKIN TONNEAU COVER",
     description: PAGE_DESCRIPTION,
     images: [
       {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "B2B Aftermarket Truck Accessories & Sourcing | TOBEKIN",
+    title: "B2B Aftermarket Truck Accessories & Sourcing | TOBEKIN TONNEAU COVER",
     description: PAGE_DESCRIPTION,
     images: ["/products-banner.jpg"],
   },

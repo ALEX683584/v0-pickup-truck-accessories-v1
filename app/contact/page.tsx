@@ -6,14 +6,14 @@ const CONTACT_URL = `${SITE_URL}/contact`
 const CONTACT_DESCRIPTION = "Send a B2B inquiry to TOBEKIN for wholesale tonneau covers, dealer pricing, bulk truck bed cover orders, fitment support, and supplier information."
 
 export const metadata: Metadata = {
-  title: "B2B Tonneau Cover Inquiry & Sourcing | TOBEKIN",
+  title: "B2B Tonneau Cover Inquiry & Sourcing",
   description: CONTACT_DESCRIPTION,
   alternates: {
     canonical: CONTACT_URL,
   },
   openGraph: {
     url: CONTACT_URL,
-    title: "B2B Tonneau Cover Inquiry & Sourcing | TOBEKIN",
+    title: "B2B Tonneau Cover Inquiry & Sourcing | TOBEKIN TONNEAU COVER",
     description: CONTACT_DESCRIPTION,
     images: [
       {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "B2B Tonneau Cover Inquiry & Sourcing | TOBEKIN",
+    title: "B2B Tonneau Cover Inquiry & Sourcing | TOBEKIN TONNEAU COVER",
     description: CONTACT_DESCRIPTION,
     images: ['/og-image.png'],
   },
