@@ -123,18 +123,13 @@ function ContactActionCard({
     setDialogOpen(true)
   }, [value])
 
-  /* ---- confirm redirect: the tracked conversion button ---- */
+  /* ---- confirm redirect: close dialog after small delay ---- */
   const handleConfirmRedirect = useCallback(() => {
-    setDialogOpen(false)
     // small delay so the dialog close animation doesn't get cut off
     setTimeout(() => {
-      if (openInNewTab) {
-        window.open(openHref, "_blank", "noopener,noreferrer")
-      } else {
-        window.location.href = openHref
-      }
+      setDialogOpen(false)
     }, 150)
-  }, [openHref, openInNewTab])
+  }, [])
 
   /* ---- reset copied state when dialog closes ---- */
   const handleDialogChange = useCallback((open: boolean) => {
@@ -198,16 +193,22 @@ function ContactActionCard({
             </div>
           </DialogDescription>
 
-          {/* Black confirm button with white hollow icon */}
+          {/* Black confirm button with white hollow icon - now an actual link for conversion tracking */}
           <Button
-            type="button"
+            asChild
             className="w-full bg-black text-white hover:bg-black/90 border-0"
-            onClick={handleConfirmRedirect}
             data-event={`${eventPrefix}_confirm`}
             id={`contact-${type}-confirm`}
           >
-            <ConfirmButtonIcon type={type} />
-            {openLabel}
+            <a
+              href={openHref}
+              target={openInNewTab ? "_blank" : undefined}
+              rel={openInNewTab ? "noopener noreferrer" : undefined}
+              onClick={handleConfirmRedirect}
+            >
+              <ConfirmButtonIcon type={type} />
+              {openLabel}
+            </a>
           </Button>
         </DialogContent>
       </Dialog>
