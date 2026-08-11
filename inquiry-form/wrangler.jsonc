@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "inquiry-form",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-11",
+  "routes": [
+    {
+      "pattern": "inquiry.tobekin.com",
+      "custom_domain": true
+    }
+  ],
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "destination_address": "auto683584alex@gmail.com"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

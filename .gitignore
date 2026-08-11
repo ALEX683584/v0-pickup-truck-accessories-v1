@@ -32,3 +32,4 @@ next-env.d.ts
 
 # pnpm (本项目使用 npm)
 pnpm-lock.yaml
+.DS_Store
