@@ -39,7 +39,7 @@ export async function POST(req: Request) {
 
     // 环境变量与目标配置
     const targetEmail = process.env.CONTACT_EMAIL || 'auto683584alex@gmail.com';
-    const CF_WORKER_URL = process.env.CF_WORKER_URL;
+    const CF_WORKER_URL = process.env.CF_WORKER_URL || 'https://inquiry.tobekin.com';
     const FEISHU_WEBHOOK_URL =
       process.env.FEISHU_WEBHOOK_URL ||
       'https://open.feishu.cn/open-apis/bot/v2/hook/25ae59af-a5e0-47e0-9ede-1902f0e7735b';
