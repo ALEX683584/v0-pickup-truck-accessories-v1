@@ -4,7 +4,9 @@ import { ArrowRight } from "lucide-react"
 import { HeroSection } from "@/components/hero-section"
 import { FeaturedProducts } from "@/components/featured-products"
 import { WhyChooseUs } from "@/components/why-choose-us"
+import { ContactSection } from "@/components/contact-section"
 import { CtaSection } from "@/components/cta-section"
+import { ScrollInquiryPopup } from "@/components/scroll-inquiry-popup"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tobekin.com"
 const HOME_DESCRIPTION = "TOBEKIN supplies tonneau truck bed covers for B2B buyers, including wholesalers, dealers, distributors, Amazon sellers, and bulk pickup accessory buyers."
@@ -63,7 +65,9 @@ export default function Home() {
         </div>
       </section>
       <WhyChooseUs />
+      <ContactSection />
       <CtaSection />
+      <ScrollInquiryPopup />
     </>
   )
 }
